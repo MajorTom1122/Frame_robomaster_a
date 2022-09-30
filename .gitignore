@@ -1,1 +1,4 @@
 RM_frame.ioc
+*.d
+*.o
+*.crf
