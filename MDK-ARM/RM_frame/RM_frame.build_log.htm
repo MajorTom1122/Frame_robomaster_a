@@ -22,12 +22,12 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 E:\FlyingControl\Frame_robomaster_a\MDK-ARM\RM_frame.uvprojx
-Project File Date:  09/10/2022
+Project File Date:  10/01/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RM_frame'
-compiling main.cpp...
+compiling Motors.cpp...
 ../Inc/includes.h(18): warning:  #1-D: last line of file ends without a newline
   #endif
 ../Inc/CANservice.h(22): warning:  #1-D: last line of file ends without a newline
@@ -36,11 +36,29 @@ compiling main.cpp...
   #endif
 ../Inc/includes.h(18): warning:  #1-D: last line of file ends without a newline
   #endif
-..\Src\main.cpp: 4 warnings, 0 errors
+..\Device\Motors.cpp(5): warning:  #1-D: last line of file ends without a newline
+  **/
+..\Device\Motors.cpp: 5 warnings, 0 errors
+compiling CANservice.cpp...
+../Inc/includes.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Inc/CANservice.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Inc/CallbackAdministration.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Inc/includes.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Communication\CANservice.cpp(42): warning:  #940-D: missing return statement at end of non-void function "CAN::TxHandle" 
+  }
+..\Communication\CANservice.cpp(52): warning:  #940-D: missing return statement at end of non-void function "CAN::RxHandle" 
+  }
+..\Communication\CANservice.cpp(53): warning:  #1-D: last line of file ends without a newline
+  CAN CAN::can1;
+..\Communication\CANservice.cpp: 7 warnings, 0 errors
 linking...
 Program Size: Code=25664 RO-data=1440 RW-data=148 ZI-data=30212  
 FromELF: creating hex file...
-"RM_frame\RM_frame.axf" - 0 Error(s), 4 Warning(s).
+"RM_frame\RM_frame.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -63,7 +81,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

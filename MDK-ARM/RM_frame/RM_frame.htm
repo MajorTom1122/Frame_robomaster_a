@@ -3,7 +3,7 @@
 <title>Static Call Graph - [RM_frame\RM_frame.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image RM_frame\RM_frame.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 01 00:19:44 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 01 00:56:17 2022
 <BR><P>
 <H3>Maximum Stack Usage =        400 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1191,9 +1191,9 @@ Global Symbols
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Start
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Start
 </UL>
 
 <P><STRONG><a name="[c6]"></a>HAL_Init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32f4xx_hal.o(i.HAL_Init))
@@ -2042,9 +2042,9 @@ Global Symbols
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_split
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_get_next
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_find_init
-<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_get
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_get
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cmd.o(FSymTab)
 </UL>
@@ -2133,9 +2133,9 @@ Global Symbols
 <P><STRONG><a name="[147]"></a>rt_exit_critical</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, scheduler.o(i.rt_exit_critical))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rt_exit_critical &rArr; rt_schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
 </UL>
 <BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_init
 </UL>
@@ -2169,11 +2169,11 @@ Global Symbols
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM10_Init
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
 <LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_components_board_init
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtthread_startup
 </UL>
@@ -2189,8 +2189,8 @@ Global Symbols
 <P><STRONG><a name="[14f]"></a>rt_hw_console_output</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, board.o(i.rt_hw_console_output))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = rt_hw_console_output &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_strlen
-<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_kprintf
 </UL>
@@ -2249,13 +2249,13 @@ Global Symbols
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_split
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_thread
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_hard_fault_exception
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usage_fault_track
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_manage_fault_track
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hard_fault_track
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bus_fault_track
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_show_version
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_hard_fault_exception
 </UL>
 
 <P><STRONG><a name="[134]"></a>rt_memmove</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, kservice.o(i.rt_memmove))
@@ -2288,12 +2288,12 @@ Global Symbols
 <P><STRONG><a name="[154]"></a>rt_object_init</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, object.o(i.rt_object_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = rt_object_init &rArr; rt_exit_critical &rArr; rt_schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_exit_critical
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_exit_critical
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_enter_critical
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_get_information
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_strncpy
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_init
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_init
@@ -2307,11 +2307,11 @@ Global Symbols
 <P><STRONG><a name="[148]"></a>rt_schedule</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, scheduler.o(i.rt_schedule))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = rt_schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ffs
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_context_switch_interrupt
+<BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_context_switch_interrupt
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_context_switch
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ffs
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_timeout
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_sleep
@@ -2378,8 +2378,8 @@ Global Symbols
 <P><STRONG><a name="[15b]"></a>rt_system_scheduler_start</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, scheduler.o(i.rt_system_scheduler_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rt_system_scheduler_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ffs
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_context_switch_to
+<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_context_switch_to
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ffs
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtthread_startup
 </UL>
@@ -2395,15 +2395,15 @@ Global Symbols
 <P><STRONG><a name="[68]"></a>rt_thread_exit</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, thread.o(i.rt_thread_exit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = rt_thread_exit &rArr; rt_timer_detach &rArr; rt_object_detach
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_detach
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_detach
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_insert_after
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_thread_cleanup_execute
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule_remove_thread
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_is_systemobject
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_detach
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> thread.o(i._rt_thread_init)
 </UL>
@@ -2439,29 +2439,29 @@ Global Symbols
 <P><STRONG><a name="[163]"></a>rt_thread_resume</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, thread.o(i.rt_thread_resume))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rt_thread_resume &rArr; rt_timer_stop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_stop
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_stop
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_remove
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule_insert_thread
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_startup
 </UL>
 
 <P><STRONG><a name="[151]"></a>rt_thread_self</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, thread.o(i.rt_thread_self))
-<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_increase
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_hard_fault_exception
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_hard_fault_exception
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_increase
 </UL>
 
 <P><STRONG><a name="[162]"></a>rt_thread_sleep</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, thread.o(i.rt_thread_sleep))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = rt_thread_sleep &rArr; rt_timer_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_start
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_start
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_control
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_suspend
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_mdelay
 </UL>
@@ -2480,10 +2480,10 @@ Global Symbols
 <P><STRONG><a name="[166]"></a>rt_thread_suspend</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, thread.o(i.rt_thread_suspend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rt_thread_suspend &rArr; rt_timer_stop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_stop
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule_remove_thread
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_stop
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule_remove_thread
 </UL>
 <BR>[Called By]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_sleep
 </UL>
@@ -2500,10 +2500,10 @@ Global Symbols
 <P><STRONG><a name="[169]"></a>rt_thread_yield</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, thread.o(i.rt_thread_yield))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rt_thread_yield &rArr; rt_schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_remove
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_remove
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_schedule
 </UL>
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_increase
 </UL>
@@ -2531,13 +2531,13 @@ Global Symbols
 <P><STRONG><a name="[16a]"></a>rt_timer_check</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, timer.o(i.rt_timer_check))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = rt_timer_check &rArr; rt_timer_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_remove
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_remove
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_insert_after
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_start
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_get
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_increase
 </UL>
@@ -2554,10 +2554,10 @@ Global Symbols
 <P><STRONG><a name="[15d]"></a>rt_timer_detach</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, timer.o(i.rt_timer_detach))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rt_timer_detach &rArr; rt_object_detach
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_detach
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_detach
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_exit
 </UL>
@@ -2573,11 +2573,11 @@ Global Symbols
 <P><STRONG><a name="[168]"></a>rt_timer_start</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, timer.o(i.rt_timer_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rt_timer_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_insert_after
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_list_insert_after
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tick_get
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_sleep
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_check
@@ -2586,9 +2586,9 @@ Global Symbols
 <P><STRONG><a name="[165]"></a>rt_timer_stop</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, timer.o(i.rt_timer_stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = rt_timer_stop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_timer_remove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_suspend
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_resume
@@ -2606,7 +2606,8 @@ Global Symbols
 <P><STRONG><a name="[98]"></a>rtthread_startup</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, components.o(i.rtthread_startup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = rtthread_startup &rArr; rt_hw_board_init &rArr; MX_ADC2_Init &rArr; HAL_ADC_Init &rArr; HAL_ADC_MspInit &rArr; Error_Handler &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
 </UL>
-<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_idle_init
+<BR>[Calls]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_idle_init
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_system_timer_thread_init
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_system_timer_init
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_system_scheduler_start
@@ -2614,7 +2615,6 @@ Global Symbols
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_show_version
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_board_init
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_application_init
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>

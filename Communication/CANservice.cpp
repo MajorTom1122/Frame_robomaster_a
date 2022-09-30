@@ -1,5 +1,4 @@
 #include "includes.h"
-#include <rtthread.h>
 CAN::CAN()
 {
 	 HAL_StatusTypeDef HAL_Status;
