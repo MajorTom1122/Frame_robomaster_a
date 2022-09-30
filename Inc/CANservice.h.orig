@@ -1,0 +1,31 @@
+#ifndef CANSERVICE_H
+#define CANSERVICE_H
+
+#include "includes.h"
+class CAN
+{
+public:
+    static CAN can1, can2;
+    void Reset();
+    void RxHandle();
+    void TxHandle();
+private:
+    typedef struct {
+        uint32_t TxID;
+        uint32_t RxID;
+        void (*TxHandler)(uint8_t *);
+        void (*RxHandler)(uint8_t *);
+    } CANDevice_t;
+		void TxHandleMotor(uint8_t part);
+		uint8_t sendData[10];
+    uint8_t currentSendData;
+		CAN_HandleTypeDef *hcan;
+    CAN_RxHeaderTypeDef RxMsg;
+    CAN_TxHeaderTypeDef TxMsg;
+    uint8_t RxData[8];
+    uint8_t TxData[8];
+		uint16_t GetIntensity();
+
+};
+
+#endif
